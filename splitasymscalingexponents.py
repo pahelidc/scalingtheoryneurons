@@ -26,10 +26,9 @@ beta2 = np.loadtxt('beta2.dat')
 
 betadiff = np.subtract(beta1,beta2)
 
-betadiff = np.abs(betadiff) #calculates the difference scale factor magnitufe
+betadiff = np.abs(betadiff) #calculates the difference scale factor magnitude
 
-#splits the data into symmetric and asymmetric data
-
+#splits the data into symmetric and asymmetric data based on the asymmetry line, which is two standard deviations away from the symmetric case (delta beta = 0)
 beta1sym = beta1[betadiff <0.75] #Can change this value depending on the split of the data into symmetric and asymmetric regimes
 beta2sym = beta2[betadiff <0.75]
 
