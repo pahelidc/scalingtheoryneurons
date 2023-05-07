@@ -313,7 +313,7 @@ if sys.argv[3] == "moto":
 #additional data: cummulative for each cell
 maxleafno = np.amax(ml_output[:,4])
 
-summary = np.c_[np.mean(ml_output[:,0]), np.mean(ml_output[:,1]), np.amax(ml_output[:,4])]
+summary = np.c_[np.mean(ml_output[:,0]), np.mean(ml_output[:,1]), np.amax(ml_output[:,4]), np.mean(ml_output[:,4])] #summary of cell, including maximum and average leaf number
 
 np.savetxt('cellsummary_%s.dat'% sys.argv[2], summary)
 
